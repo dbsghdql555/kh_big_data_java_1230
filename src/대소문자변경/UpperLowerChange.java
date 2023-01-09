@@ -13,18 +13,32 @@ public class UpperLowerChange {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String a = sc.next();
-        char[] arr = a.toCharArray();
-        for (int i = 0; i < arr.length; i++) {
-            char ch = (a.charAt(i));
-            if (ch >= 'a' && ch <= 'z') {
-                arr[i] = Character.toUpperCase(ch);
-            }
-            else if(ch >= 'A' && ch <= 'Z') {
-                arr[i] = Character.toLowerCase(ch);
-            }
 
+//        char[] arr = a.toCharArray();
+//        for (int i = 0; i < arr.length; i++) {
+//            char ch = (a.charAt(i));
+//            if (ch >= 'a' && ch <= 'z') {
+//                arr[i] = Character.toUpperCase(ch);
+//            }
+//            else if(ch >= 'A' && ch <= 'Z') {
+//                arr[i] = Character.toLowerCase(ch);
+//            }
+//
+//        }
+        for (int i = 0; i<a.length(); i++) {
+            char ch = a.charAt(i);
+            int n = 0;
+            if (ch < 'a') {
+                n = (('a' - 'A'));
+                ch = (char) (n + ch);
+            }
+            else {
+                n = ('A' - 'a');
+                ch = (char) (n + ch);
+            }
+            System.out.print(ch);
         }
-        System.out.println(arr);
+//        System.out.println(arr);
 
     }
 }
