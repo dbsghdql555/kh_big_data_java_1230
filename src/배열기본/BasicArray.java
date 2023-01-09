@@ -1,5 +1,4 @@
 package 배열기본;
-
 public class BasicArray {
     public static void main(String[] args) {
 //        int[] score = new int[3]; // 타입[] 참조 변수 = new 타입[크기];
@@ -14,5 +13,7 @@ public class BasicArray {
         }
         System.out.println("총점 : " + sum);
         System.out.printf("평균 : %.2f\n", + (double)sum/score.length);
+
+
     }
 }
